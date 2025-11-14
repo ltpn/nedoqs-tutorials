@@ -41,7 +41,7 @@ RUN set -eux; \
             exit 1; \
             ;; \
     esac; \
-    source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.instantiate()';
+    source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.Registry.add("General"); Pkg.resolve(); Pkg.instantiate()';
 
 # Cleanup
 USER root
