@@ -47,6 +47,14 @@ jobs:
       - name: Checkout buildfiles
         run: git fetch && git checkout origin/main -- Project.toml requirements.txt
 
+      - name: Cleanup runner
+        run: | 
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
