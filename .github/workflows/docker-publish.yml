@@ -198,10 +198,6 @@ jobs:
       
           IMAGE="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
       
-          # Pull the architecture-specific images (already pushed by matrix jobs)
-          docker pull "${IMAGE}:amd64"
-          docker pull "${IMAGE}:arm64"
-      
           # For every tag from metadata, create and push a manifest
           while read -r TAG; do
             [ -z "$TAG" ] && continue
