@@ -18,7 +18,23 @@ RUN mamba install --yes nbgitpuller
 
 # Install Python dependencies
 COPY requirements.txt /tmp/
-RUN mamba install --yes --file /tmp/requirements.txt
+#RUN mamba install --yes --file /tmp/requirements.txt
+# NOTE: remove this workaround once https://github.com/conda-forge/qiskit-aer-feedstock/issues/64 is fixed
+RUN set -eux; \
+    arch="$(dpkg --print-architecture)"; \
+    if [ "$arch" = "arm64" ]; then \
+        # Extract qiskit-aer version from requirements.txt
+        QISKIT_AER_VERSION="$(awk -F'==' '/^qiskit-aer==/ {print $2}' /tmp/requirements.txt)"; \
+        # Remove qiskit-aer line so mamba doesn't try to solve/install it
+        sed -i '/^qiskit-aer==/d' /tmp/requirements.txt; \
+        # Install remaining requirements with mamba
+        mamba install --yes --file /tmp/requirements.txt; \
+        # Install qiskit-aer via pip for arm64
+        [ ! -z "$QISKIT_AER_VERSION" ] && python -m pip install "qiskit-aer==${QISKIT_AER_VERSION}"; \
+    else \
+        # Non-arm64: standard mamba install
+        mamba install --yes --file /tmp/requirements.txt; \
+    fi
 
 # Copy Julia Project files to the root directory of the container
 COPY Project.toml  /opt/julia/environments/v1.12/
