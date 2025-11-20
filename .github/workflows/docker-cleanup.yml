@@ -14,17 +14,9 @@ jobs:
 
     steps:
       - name: Delete old packages
-        # uses: SmartsquareGmbH/delete-old-packages@v0.8.1
-        # with:
-        #   organization: ltpn
-        #   type: container
-        #   names: |
-        #     snedoqs-tutorials
-        #   keep: 12  # 5 per arch + 2 for the multi-arch image
-        #   # dry-run: true
         uses: dataaxiom/ghcr-cleanup-action@v1
         with:
-          dry-run: true
+          # dry-run: true
           keep-n-tagged: 1
           exclude-tags: dev
           delete-untagged: true
