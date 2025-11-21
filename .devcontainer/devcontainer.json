@@ -16,7 +16,13 @@
 				"ms-toolsai.jupyter",
 				"julialang.language-julia",
 				"h5web.vscode-h5web"
-			]
+			],
+			"settings": {
+				"julia.symbolCacheDownload": true,
+    			"julia.enableTelemetry": false,
+				"julia.execution.resultType": "inline, errors in REPL"
+				//"julia.NumThreads": "auto"  // Should already be the case via JULIA_NUM_THREADS
+			}
 		}
 	},
 
