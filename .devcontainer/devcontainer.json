@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
 
-	"name": "snedoqs-tutorials",
+	"name": "nedoqs-tutorials",
 
-	"image": "ghcr.io/ltpn/snedoqs-tutorials:docker",
+	"image": "ghcr.io/ltpn/nedoqs-tutorials:docker",
 
 	// Workaround https://github.com/microsoft/vscode-remote-release/issues/7104
-	"initializeCommand": "(docker pull ghcr.io/ltpn/snedoqs-tutorials:docker && docker image prune --filter 'label=ghcr.io/ltpn/snedoqs-tutorials:docker' -f) || true",
+	"initializeCommand": "(docker pull ghcr.io/ltpn/nedoqs-tutorials:docker && docker image prune --filter 'label=ghcr.io/ltpn/nedoqs-tutorials:docker' -f) || true",
 
 	// Configure tool-specific properties.
 	"customizations": {
