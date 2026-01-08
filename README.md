@@ -1,6 +1,6 @@
 # NEDOQS Tutorials
 
-This repository contains tutorials for the School on Non-Equilibrium Dynamics of Open Quantum Systems.
+This repository contains tutorials for the [School on Non-Equilibrium Dynamics of Open Quantum Systems](https://nedoqs2026.epfl.ch).
 
 ## Run Online
 
