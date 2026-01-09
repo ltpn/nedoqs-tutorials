@@ -7,6 +7,7 @@ on:
     paths:
       - 'requirements.txt'
       - 'Project.toml'
+      - 'LocalPreferences.toml'
   pull_request:
     branches: [ "main" ]
     paths:
