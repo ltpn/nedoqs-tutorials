@@ -88,6 +88,7 @@ jobs:
         run: |
           cp buildfiles/requirements.txt requirements.txt
           cp buildfiles/Project.toml Project.toml
+          cp buildfiles/LocalPreferences.toml LocalPreferences.toml
 
       - name: Check disk space pre-cleanup
         run: df . -h

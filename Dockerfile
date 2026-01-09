@@ -22,6 +22,7 @@ RUN mamba install --yes --file /tmp/requirements.txt
 
 # Copy Julia Project files to the root directory of the container
 COPY Project.toml  /opt/julia/environments/v1.12/
+COPY LocalPreferences.toml /opt/julia/environments/v1.12/
 #COPY Manifest.toml /opt/julia/environments/v1.12/
 
 # Install Julia kernel & precompiled packages
