@@ -1,16 +1,16 @@
-# NEDOQS Tutorials
+# 📚 NEDOQS Tutorials
 
 This repository contains tutorials for the [School on Non-Equilibrium Dynamics of Open Quantum Systems](https://nedoqs2026.epfl.ch).
 
-## Run Online
+## 📡 Run online
 
-Click the button below to open the exercises in a new Codespace:
+Click the button below to open the tutorials in a new Codespace:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=1096466244&skip_quickstart=true&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
 A machine type with at least 4 cores is highly recommended. This will consume more of your quota than a 2-core machine; see [📖 Free quota](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-quota) and [📖 Pricing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#pricing) for more info.
 
-## Run Locally
+## 💻 Run locally
 
 While Codespaces are great for learning/experimenting, we advise to set up a local environment on your computer for more in-depth work and better performance.
 
@@ -29,6 +29,6 @@ The steps are generally as follows.
 **Note:**  
 The similar command **Dev Containers: Clone Repository in Container Volume...** will clone the repo in an isolated volume instead of your computer. This means that any file modifications in the project folder will **not** be accessible from your computer unless you copy them over manually or set up a bind mount. For more info, refer to the [📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume).
 
-## Tips
+## 💡 Tips
 
 If you don't know how to use Git, learn it; it will be worth the effort. You can get started with [this](https://nbviewer.org/github/ICESAT-2HackWeek/intro-jupyter-git/blob/master/03-Git-Tutorial.ipynb) great interactive tutorial, and/or consult GitHub's [Git Guide](https://github.com/git-guides).
