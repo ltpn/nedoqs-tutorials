@@ -12,6 +12,7 @@ on:
     paths:
       - 'requirements.txt'
       - 'Project.toml'
+      - 'LocalPreferences.toml'
 
 jobs:
   call-docker-workflow:
