@@ -26,8 +26,9 @@ The steps are generally as follows.
    Once you've chosen a destination folder and you've opened the cloned repo, VS Code will prompt you to **Reopen in Container**; click that button and you're all set.  
    👉 Alternatively, you can manually clone the repo via `git clone https://github.com/ltpn/nedoqs-tutorials.git` (preferred) or download a [zipped copy](https://github.com/ltpn/nedoqs-tutorials/archive/refs/heads/main.zip) and unzip it (discouraged), choose `File -> Open Folder`, and select the folder with the repo. If VS Code does not prompt you to "Reopen in Container", you can also do this directly via the command palette ([📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container)).
 
-**Note:**  
-The similar command **Dev Containers: Clone Repository in Container Volume...** will clone the repo in an isolated volume instead of your computer. This means that any file modifications in the project folder will **not** be accessible from your computer unless you copy them over manually or set up a bind mount. For more info, refer to the [📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume).
+**Notes:**  
+The similar command **Dev Containers: Clone Repository in Container Volume...** will clone the repo in an isolated volume instead of your computer. This means that any file modifications in the project folder will **not** be accessible from your computer unless you copy them over manually or set up a bind mount. For more info, refer to the [📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume).  
+The container is also CUDA-ready (beta). If you have an NVIDIA GPU available, you can take advantage of GPU acceleration by installing the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) on Linux or using [NVIDIA GPU Paravirtualization](https://docs.docker.com/desktop/features/gpu/) via Docker Desktop on Windows.
 
 ## 💡 Tips
 
