@@ -5,6 +5,51 @@
 
 	"image": "ghcr.io/ltpn/nedoqs-tutorials:docker",
 
+	// Fix for multi-user Docker setups.
+	//
+	// TLDR:
+	// Please use Option (2) if you're having permission issues with a
+	// multi-user Docker setup. As this is not typical, I will leave it
+	// commented out by default.
+	//
+	// Option (1) uses jupyter-docker-stacks capabilities to run as root
+	// in order to chown all the necessary directories to the target UID/GID.
+	// Unfortunately, "${localEnv:UID}" doesn't seem to work properly as UID
+	// is not necessarily exported, so one should manually set the desired UID
+	// in "NB_UID". The "group-add" run argument is recommended to avoid
+	// potential permission issues, but it causes a warning if the group
+	// doesn't exist in the container. With this option, though, it could be
+	// commented out if needed.
+	// Option (2) adds the host UID to the "users" group (GID 100) which
+	// already has read/write access to all the necessary directories,
+	// and renames the "jovyan" user to have the same UID as the host user.
+	// However, we get the error "groups: cannot find name for group ID 100".
+	// This is due to Docker changing the container's own "users" group GID
+	// from 100 to the host GID, so it could be fixed by creating a group with
+	// GID 100 in the container and give it a name, e.g. "container-users".
+	// However, this would require running as root to create the group before
+	// switching to "jovyan", so we are not currently doing that.
+	// Still, Option (2) seems to be a cleaner solution overall.
+
+	// // Option (1):
+	// "containerUser": "root",
+	// "remoteUser": "jovyan",
+	// "updateRemoteUserUID": false,  // Taken care of by jupyter-docker-stacks
+	// "overrideCommand": false,	   // Uses the entrypoint from jupyter-docker-stacks
+	// "containerEnv": {
+	// 	"NB_UID": "1001",
+	// 	"CHOWN_HOME": "yes",
+	// 	"CHOWN_HOME_OPTS": "-R",
+	// 	"CHOWN_EXTRA": "/opt/julia/",
+	// 	"CHOWN_EXTRA_OPTS": "-R"
+	// },
+	// "runArgs": ["--group-add", "1001"],  // same as NB_UID
+
+	// // Option (2):
+	// "containerUser": "jovyan",
+	// "updateRemoteUserUID": true,
+	// "runArgs": ["--group-add", "100"],
+
 	"hostRequirements": {
 		"gpu": "optional"
 	},
