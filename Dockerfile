@@ -21,9 +21,15 @@ COPY requirements.txt /tmp/
 RUN mamba install --yes --file /tmp/requirements.txt
 
 # Copy Julia Project files to the root directory of the container
-COPY Project.toml  /opt/julia/environments/v1.12/
-COPY LocalPreferences.toml /opt/julia/environments/v1.12/
-#COPY Manifest.toml /opt/julia/environments/v1.12/
+COPY Project.toml  ${JULIA_PKGDIR}/environments/v1.12/
+COPY LocalPreferences.toml ${JULIA_PKGDIR}/environments/v1.12/
+#COPY Manifest.toml ${JULIA_PKGDIR}/environments/v1.12/
+
+# Set user ownership of *toml files
+USER root
+RUN chown ${NB_UID}:${NB_GID} ${JULIA_PKGDIR}/environments/v1.12/Project.toml ${JULIA_PKGDIR}/environments/v1.12/LocalPreferences.toml
+#RUN chown ${NB_UID}:${NB_GID} ${JULIA_PKGDIR}/environments/v1.12/Manifest.toml
+USER $NB_USER
 
 # Install Julia kernel & precompiled packages
 ENV JULIA_NUM_THREADS=auto
@@ -43,6 +49,11 @@ RUN set -eux; \
             ;; \
     esac; \
     source /home/${NB_USER}/.profile && julia -e 'using Pkg; Pkg.Registry.add("General"); Pkg.resolve(); Pkg.instantiate(); using CUDA; CUDA.precompile_runtime()';
+
+# Make sure we have the right user permissions.
+# For some reason, this is not always already the case for /opt/julia/scratchspaces;
+# this impacts GPU execution in multi-user Docker setups, as the runtime is precompiled there.
+RUN fix-permissions ${JULIA_PKGDIR}/scratchspaces
 
 # Cleanup
 USER root
