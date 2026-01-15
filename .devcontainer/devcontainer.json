@@ -55,7 +55,7 @@
 	},
 
 	// Workaround https://github.com/microsoft/vscode-remote-release/issues/7104
-	"initializeCommand": [".devcontainer/init"],
+	"initializeCommand": ["bash", "-c", "(docker pull ghcr.io/ltpn/nedoqs-tutorials:docker && docker image prune --filter 'label=ghcr.io/ltpn/nedoqs-tutorials:docker' -f) || true"],
 
 	// Configure tool-specific properties.
 	"customizations": {
