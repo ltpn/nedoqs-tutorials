@@ -1,0 +1,3 @@
+#!/bin/sh
+docker pull ghcr.io/ltpn/nedoqs-tutorials:docker || true
+docker image prune --filter "label=ghcr.io/ltpn/nedoqs-tutorials:docker" -f || true
