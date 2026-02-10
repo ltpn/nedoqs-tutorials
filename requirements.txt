@@ -10,5 +10,3 @@ pillow==12.1.0
 pylatexenc==2.10
 seaborn==0.13.2
 sympy==1.14.0
-jupyter-vscode-proxy==0.7
-code-server==4.108.2
