@@ -15,7 +15,7 @@ USER $NB_USER
 WORKDIR /home/${NB_USER}
 
 # Install nbgitpuller
-RUN mamba install --yes nbgitpuller && mamba clean --yes --all
+RUN mamba install --yes nbgitpuller jupyter-vscode-proxy code-server && mamba clean --yes --all
 
 # Install Python dependencies
 COPY requirements.txt /tmp/
