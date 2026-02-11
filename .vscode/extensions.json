@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"julialang.language-julia",
+		"h5web.vscode-h5web",
+		"mathematic.vscode-pdf",
+        "chneau.resource-monitor"
+    ]
+}

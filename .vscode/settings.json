@@ -1,0 +1,8 @@
+{
+    //"julia.symbolCacheDownload": true  // Cannot be set in workspace
+    "julia.enableTelemetry": false,
+	"julia.execution.resultType": "inline, errors in REPL",
+	"julia.juliaup.install.hint": false
+	//"julia.executablePath": "/usr/local/bin/julia"  // Should only be set in the container
+	//"julia.NumThreads": "auto"  // Should already be the case via JULIA_NUM_THREADS
+}
