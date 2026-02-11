@@ -12,7 +12,7 @@ A machine type with at least 4 cores is highly recommended. This will consume mo
 
 If you prefer not to use GitHub/Codespaces, you can get a similar experience in [Renkulab](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026), made and [hosted](https://renkulab.io/help/privacy) in 🇨🇭 (beta):
 
-[![Open in Renkulab](https://tinyurl.com/open-in-renku)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
+[![Open in Renkulab](https://go.epfl.ch/open-in-renku)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
 
 ## 💻 Run locally
 
