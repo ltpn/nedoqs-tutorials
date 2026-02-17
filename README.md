@@ -12,7 +12,7 @@ A machine type with at least 4 cores is highly recommended. This will consume mo
 
 If you prefer not to use GitHub/Codespaces, you can get a similar experience in [Renkulab](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026), made and [hosted](https://renkulab.io/help/privacy) in 🇨🇭 (beta):
 
-[![Open in Renkulab](https://github.com/user-attachments/assets/676efcb5-39f2-481c-a4d5-2052c681499f)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
+[![Open in Renkulab](https://github.com/user-attachments/assets/ee64a3f1-8758-40f6-b3c0-da5be09a52b1)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
 
 ## 💻 Run locally
 
@@ -26,7 +26,7 @@ The steps are generally as follows.
 1. Install VS Code (MacOS users are advised to use [Homebrew](https://formulae.brew.sh/cask/visual-studio-code)).
 2. Install Docker and the Dev Containers Extension according to the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation).
 3. For a quickstart, click on the button below to clone the repo on your computer:  
-   [![Clone in VS Code](https://github.com/user-attachments/assets/facf0cea-f56e-43fe-9b5c-61e968432596)](https://vscode.dev/redirect?url=vscode://vscode.git/clone?url=https://github.com/ltpn/nedoqs-tutorials.git)  
+   [![Clone in VS Code](https://github.com/user-attachments/assets/2eb991d1-dee0-4d40-b5dc-eebb65e33a53)](https://vscode.dev/redirect?url=vscode://vscode.git/clone?url=https://github.com/ltpn/nedoqs-tutorials.git)  
    Once you've chosen a destination folder and you've opened the cloned repo, VS Code will prompt you to **Reopen in Container**; click that button and you're all set.  
    👉 Alternatively, you can manually clone the repo via `git clone https://github.com/ltpn/nedoqs-tutorials.git` (preferred) or download a [zipped copy](https://github.com/ltpn/nedoqs-tutorials/archive/refs/heads/main.zip) and unzip it (discouraged), choose `File -> Open Folder`, and select the folder with the repo. If VS Code does not prompt you to "Reopen in Container", you can also do this directly via the command palette ([📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container)).
 
