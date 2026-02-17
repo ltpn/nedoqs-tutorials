@@ -6,13 +6,13 @@ This repository contains tutorials for the [School on Non-Equilibrium Dynamics o
 
 Click the button below to open the tutorials in a new Codespace:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=1096466244&skip_quickstart=true&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json)
+[![Open in GitHub Codespaces](https://github.com/user-attachments/assets/541234cf-2e1b-45e0-b75e-b163329eb3a2)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=1096466244&skip_quickstart=true&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
 A machine type with at least 4 cores is highly recommended. This will consume more of your quota than a 2-core machine; see [📖 Free quota](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-quota) and [📖 Pricing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#pricing) for more info.
 
 If you prefer not to use GitHub/Codespaces, you can get a similar experience in [Renkulab](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026), made and [hosted](https://renkulab.io/help/privacy) in 🇨🇭 (beta):
 
-[![Open in Renkulab](https://go.epfl.ch/open-in-renku)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
+[![Open in Renkulab](https://github.com/user-attachments/assets/676efcb5-39f2-481c-a4d5-2052c681499f)](https://renkulab.io/p/ltpn/nedoqs-tutorials-2026/sessions/01KF4EJVBB29DG052WEYQW9B9T/start)
 
 ## 💻 Run locally
 
@@ -26,7 +26,7 @@ The steps are generally as follows.
 1. Install VS Code (MacOS users are advised to use [Homebrew](https://formulae.brew.sh/cask/visual-studio-code)).
 2. Install Docker and the Dev Containers Extension according to the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation).
 3. For a quickstart, click on the button below to clone the repo on your computer:  
-   [![Open in Dev Containers](https://img.shields.io/badge/Clone_in_VS_Code-24292e.svg?labelColor=0065A9&style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjM0IDIzNS4xIiB3aWR0aD0iMjQ4OCIgaGVpZ2h0PSIyNTAwIj48c3R5bGU%2BLnN0MHtmaWxsOiNmZmZmZmZ9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNODMuMyAxNDMuOWwtNTggNDUuMkwwIDE3Ni41VjU4LjdMMjUuMiA0Nmw1Ny42IDQ1LjNMMTc0IDBsNjAgMjMuOXYxODYuOWwtNTkuNyAyNC4zLTkxLTkxLjJ6bTg4LjkgMTUuOVY3NS4zbC01NC42IDQyLjMgNTQuNiA0Mi4yek0yNy4zIDE0NC42TDU2IDExOC41IDI3LjMgODkuOXY1NC43eiIvPjwvc3ZnPgo%3D&logoColor=white)](https://vscode.dev/redirect?url=vscode://vscode.git/clone?url=https://github.com/ltpn/nedoqs-tutorials.git)  
+   [![Clone in VS Code](https://github.com/user-attachments/assets/facf0cea-f56e-43fe-9b5c-61e968432596)](https://vscode.dev/redirect?url=vscode://vscode.git/clone?url=https://github.com/ltpn/nedoqs-tutorials.git)  
    Once you've chosen a destination folder and you've opened the cloned repo, VS Code will prompt you to **Reopen in Container**; click that button and you're all set.  
    👉 Alternatively, you can manually clone the repo via `git clone https://github.com/ltpn/nedoqs-tutorials.git` (preferred) or download a [zipped copy](https://github.com/ltpn/nedoqs-tutorials/archive/refs/heads/main.zip) and unzip it (discouraged), choose `File -> Open Folder`, and select the folder with the repo. If VS Code does not prompt you to "Reopen in Container", you can also do this directly via the command palette ([📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container)).
 
