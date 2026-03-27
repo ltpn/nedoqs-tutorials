@@ -1,0 +1,13 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    target-branch: main
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "github-actions"
+    target-branch: docker
+    directory: "/"
+    schedule:
+      interval: "weekly"
