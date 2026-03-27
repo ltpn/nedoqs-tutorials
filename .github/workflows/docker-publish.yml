@@ -55,14 +55,14 @@ jobs:
 
     steps:
       - name: Checkout docker branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: docker
           fetch-depth: 0
 
       - name: Checkout buildfiles on PR against main
         if: github.base_ref == 'main' && github.event.pull_request.number != ''
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: buildfiles
           ref: ${{ github.event.pull_request.head.sha }}
@@ -70,7 +70,7 @@ jobs:
 
       - name: Checkout buildfiles on push to main
         if: github.ref == 'refs/heads/main' && github.base_ref == ''
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: buildfiles
           # default ref: github.sha
@@ -78,7 +78,7 @@ jobs:
 
       - name: Checkout buildfiles on PR / push to docker
         if: github.ref == 'refs/heads/docker' || github.base_ref == 'docker'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: buildfiles
           ref: main
