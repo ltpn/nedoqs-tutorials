@@ -1,12 +1,12 @@
-numpy==2.4.2
-scipy==1.17.0
+numpy==2.4.3
+scipy==1.17.1
 qutip==5.2.3
 matplotlib==3.10.8
-qiskit==2.3.0
-qiskit-ibm-runtime==0.45.0
+qiskit==2.3.1
+qiskit-ibm-runtime==0.46.1
 qiskit-aer==0.17.2
 pydot==4.0.1
-pillow==12.1.0
+pillow==12.1.1
 pylatexenc==2.10
 seaborn==0.13.2
 sympy==1.14.0
