@@ -1,4 +1,4 @@
-FROM quay.io/jupyter/julia-notebook:julia-1.12.5
+FROM quay.io/jupyter/julia-notebook:julia-1.12.6
 
 # Switch to root user
 USER root
