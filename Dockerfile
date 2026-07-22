@@ -19,7 +19,21 @@ RUN mamba install --yes nbgitpuller jupyter-vscode-proxy code-server && mamba cl
 
 # Install Python dependencies
 COPY requirements.txt /tmp/
-RUN mamba install --yes --file /tmp/requirements.txt && mamba clean --yes --all
+#RUN mamba install --yes --file /tmp/requirements.txt
+# NOTE: mthree is not available in conda-forge, nor for Python > 3.12 in pip.
+RUN set -eux; \
+    # We use a dedicated env because the base image pins Python to 3.13
+    mamba create --yes -n Qiskit python=3.12 pip ipykernel; \
+    # Install requirements via pip
+    mamba run -n Qiskit python -m pip install -r /tmp/requirements.txt; \
+    # Make sure kernels are installed
+    mamba run -n Qiskit python -m ipykernel install --user --name Qiskit --display-name "Python 3.12 (Qiskit)"; \
+    # Cleanup mamba
+    mamba clean --yes --all;
+
+# # Make Python 3.12 the default interpreter in the container shell.
+# ENV PATH="/opt/conda/envs/Qiskit/bin:${PATH}"
+# ENV CONDA_DEFAULT_ENV="Qiskit"
 
 # Copy Julia Project files to the root directory of the container
 COPY Project.toml  ${JULIA_PKGDIR}/environments/v1.12/
