@@ -5,6 +5,7 @@ matplotlib==3.11.0
 qiskit==2.4.2
 qiskit-ibm-runtime==0.47.0
 qiskit-aer==0.17.2
+mthree==3.0.0
 pydot==4.0.1
 pillow==12.2.0
 pylatexenc==2.10
