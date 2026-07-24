@@ -24,16 +24,17 @@ In order to ease the installation of all the dependencies, however, we also prov
 
 The steps are generally as follows.
 1. Install VS Code (MacOS users are advised to use [Homebrew](https://formulae.brew.sh/cask/visual-studio-code)).
-2. Install Docker and the Dev Containers Extension according to the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation).
+2. Install Docker and the Dev Containers Extension according to the [documentation](https://code.visualstudio.com/docs/devcontainers/containers#_installation)[^1].
 3. For a quickstart, click on the button below to clone the repo on your computer:  
    [![Clone in VS Code](https://github.com/user-attachments/assets/2eb991d1-dee0-4d40-b5dc-eebb65e33a53)](https://vscode.dev/redirect?url=vscode://vscode.git/clone?url=https://github.com/ltpn/nedoqs-tutorials.git)  
    Once you've chosen a destination folder and you've opened the cloned repo, VS Code will prompt you to **Reopen in Container**; click that button and you're all set.  
    👉 Alternatively, you can manually clone the repo via `git clone https://github.com/ltpn/nedoqs-tutorials.git` (preferred) or download a [zipped copy](https://github.com/ltpn/nedoqs-tutorials/archive/refs/heads/main.zip) and unzip it (discouraged), choose `File -> Open Folder`, and select the folder with the repo. If VS Code does not prompt you to "Reopen in Container", you can also do this directly via the command palette ([📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container)).
 
-**Notes:**  
-The similar command **Dev Containers: Clone Repository in Container Volume...** will clone the repo in an isolated volume instead of your computer. This means that any file modifications in the project folder will **not** be accessible from your computer unless you copy them over manually or set up a bind mount. For more info, refer to the [📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume).  
-The container is also CUDA-ready (beta). If you have an NVIDIA GPU available, you can take advantage of GPU acceleration by installing the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) on Linux or using [NVIDIA GPU Paravirtualization](https://docs.docker.com/desktop/features/gpu/) via Docker Desktop on Windows.
+> [!NOTE]
+> The similar command **Dev Containers: Clone Repository in Container Volume...** will clone the repo in an isolated volume instead of your computer. This means that any file modifications in the project folder will **not** be accessible from your computer unless you copy them over manually or set up a bind mount. For more info, refer to the [📖 documentation](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume).  
+> The container is also CUDA-ready (beta). If you have an NVIDIA GPU available, you can take advantage of GPU acceleration by installing the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) on Linux or using [NVIDIA GPU Paravirtualization](https://docs.docker.com/desktop/features/gpu/) via Docker Desktop on Windows.
 
 ## 💡 Tips
-
 If you don't know how to use Git, learn it; it will be worth the effort. You can get started with [this](https://nbviewer.org/github/ICESAT-2HackWeek/intro-jupyter-git/blob/master/03-Git-Tutorial.ipynb) great interactive tutorial, and/or consult GitHub's [Git Guide](https://github.com/git-guides).
+
+[^1]: On Windows, make sure to [use the WSL 2 backend](https://docs.docker.com/desktop/features/wsl/), that WSL 2 has a [default distribution](https://learn.microsoft.com/en-us/windows/wsl/install) providing `bash`, and that the [Docker / WSL 2 integration](https://docs.docker.com/desktop/features/wsl/#enable-docker-in-a-wsl-2-distribution) is enabled.
